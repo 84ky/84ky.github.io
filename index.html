@@ -1,65 +1,96 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michele Lorusso | Sito Personale</title>
+    <title>Michele Lorusso | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Google: Inter per un look pulito e moderno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Intestazione / Header -->
-    <header>
-        <div class="container">
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge-status">In cerca di nuove opportunità</span>
             <h1>Michele Lorusso</h1>
-            <p>Benvenuti nel mio sito personale</p>
+            <p class="subtitle">Sviluppatore & Creativo Digitale</p>
+            <div class="hero-buttons">
+                <a href="#progetti" class="btn btn-primary">Vedi i Progetti</a>
+                <a href="#contatti" class="btn btn-secondary">Contattami</a>
+            </div>
         </div>
     </header>
 
-    <!-- Navigazione -->
-    <nav>
-        <a href="#chi-sono">Chi Sono</a>
-        <a href="#progetti">Progetti</a>
-        <a href="#contatti">Contatti</a>
+    <!-- Menu di Navigazione Sticky -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">ML.</a>
+            <div class="nav-links">
+                <a href="#chi-sono">Chi Sono</a>
+                <a href="#skills">Competenze</a>
+                <a href="#progetti">Progetti</a>
+                <a href="#contatti">Contatti</a>
+            </div>
+        </div>
     </nav>
 
-    <main class="container">
+    <main class="main-content">
         <!-- Sezione Chi Sono -->
-        <section id="chi-sono">
+        <section id="chi-sono" class="card-section">
             <h2>Chi Sono</h2>
-            <p>Inserisci qui una breve descrizione di te, della tua professione, dei tuoi interessi e delle tue competenze.</p>
+            <p>Benvenuto sul mio sito web! Sono appassionato di tecnologia, innovazione e sviluppo. Mi occupo di creare soluzioni digitali efficaci, prestando sempre attenzione alla qualità del codice e all'esperienza utente.</p>
+        </section>
+
+        <!-- Sezione Competenze -->
+        <section id="skills" class="card-section">
+            <h2>Competenze</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5 & CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">UI/UX Design</span>
+                <span class="skill-tag">Problem Solving</span>
+            </div>
         </section>
 
         <!-- Sezione Progetti -->
-        <section id="progetti">
-            <h2>I Miei Progetti</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Progetto 1</h3>
-                    <p>Descrizione del primo progetto o esperienza lavorativa.</p>
+        <section id="progetti" class="card-section">
+            <h2>Progetti In Evidenza</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Progetto Principale</h3>
+                        <p>Breve descrizione del progetto. Spiega cosa fa, quali problemi risolve e quali tecnologie hai utilizzato per realizzarlo.</p>
+                        <a href="#" class="project-link">Scopri di più &rarr;</a>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Progetto 2</h3>
-                    <p>Descrizione del secondo progetto o esperienza lavorativa.</p>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Secondo Progetto</h3>
+                        <p>Descrizione di un'altra tua esperienza o lavoro rilevante. Mostra le tue capacità pratiche.</p>
+                        <a href="#" class="project-link">Scopri di più &rarr;</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Sezione Contatti -->
-        <section id="contatti">
-            <h2>Contatti</h2>
-            <p>Puoi contattarmi via email o sui miei profili social:</p>
-            <ul>
-                <li>Email: <a href="mailto:tuamail@example.com">tuamail@example.com</a></li>
-                <li>LinkedIn: <a href="#" target="_blank">Profilo LinkedIn</a></li>
-            </ul>
+        <section id="contatti" class="card-section contact-section">
+            <h2>Mettiamoci in Contatto</h2>
+            <p>Hai un progetto in mente o vuoi semplicemente fare due chiacchiere? Mandami un messaggio!</p>
+            <div class="contact-links">
+                <a href="mailto:tuamail@example.com" class="btn btn-primary">Invia una Mail</a>
+                <a href="https://linkedin.com" target="_blank" class="btn btn-secondary">LinkedIn</a>
+            </div>
         </section>
     </main>
 
-    <!-- Piè di pagina / Footer -->
     <footer>
-        <p>&copy; 2026 Michele Lorusso. Tutti i diritti riservati.</p>
+        <p>&copy; 2026 Michele Lorusso — Realizzato su GitHub Pages</p>
     </footer>
 
 </body>
