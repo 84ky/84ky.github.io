@@ -3,94 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michele Lorusso | Portfolio</title>
+    <title>Michele Lorusso | Vision & Art</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Google: Inter per un look pulito e moderno -->
+    <!-- Font Futuristici: Orbitron (Titoli) e Space Grotesk (Testo) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header / Hero Section -->
+    <!-- Background Animato Glow -->
+    <div class="bg-glow"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-content">
-            <span class="badge-status">In cerca di nuove opportunità</span>
-            <h1>Michele Lorusso</h1>
-            <p class="subtitle">Sviluppatore & Creativo Digitale</p>
-            <div class="hero-buttons">
-                <a href="#progetti" class="btn btn-primary">Vedi i Progetti</a>
-                <a href="#contatti" class="btn btn-secondary">Contattami</a>
+        <div class="hero-container">
+            <div class="glitch-wrapper">
+                <p class="symbol">// PORTFOLIO ARTISTICO</p>
+                <h1 class="hero-title">MICHELE LORUSSO</h1>
+            </div>
+            <p class="hero-subtitle">Esploratore di forme, ombre e dimensioni digitali.</p>
+            <div class="hero-actions">
+                <a href="#opere" class="btn btn-neon">Esplora le Opere</a>
+                <a href="#contatti" class="btn btn-ghost">Contatto Cifrato</a>
             </div>
         </div>
     </header>
 
-    <!-- Menu di Navigazione Sticky -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">ML.</a>
+            <a href="#" class="logo">ML<span class="dot">.</span>RAW</a>
             <div class="nav-links">
-                <a href="#chi-sono">Chi Sono</a>
-                <a href="#skills">Competenze</a>
-                <a href="#progetti">Progetti</a>
-                <a href="#contatti">Contatti</a>
+                <a href="#visione">01. Visione</a>
+                <a href="#opere">02. Galleria</a>
+                <a href="#media">03. Mediums</a>
+                <a href="#contatti">04. Segnale</a>
             </div>
         </div>
     </nav>
 
-    <main class="main-content">
-        <!-- Sezione Chi Sono -->
-        <section id="chi-sono" class="card-section">
-            <h2>Chi Sono</h2>
-            <p>Benvenuto sul mio sito web! Sono appassionato di tecnologia, innovazione e sviluppo. Mi occupo di creare soluzioni digitali efficaci, prestando sempre attenzione alla qualità del codice e all'esperienza utente.</p>
+    <main class="main-container">
+
+        <!-- Manifest/Visione -->
+        <section id="visione" class="glass-card">
+            <div class="card-header">
+                <span class="code-tag">SYSTEM // 01</span>
+                <h2>La Visione</h2>
+            </div>
+            <p class="description">
+                L'arte è un ponte tra l'ignoto e il visibile. Attraverso la sperimentazione visiva, fondendo l'estetica industriale e futurista con concetti astratti, creo mondi che sfidano la percezione ordinaria.
+            </p>
         </section>
 
-        <!-- Sezione Competenze -->
-        <section id="skills" class="card-section">
-            <h2>Competenze</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">HTML5 & CSS3</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">Git & GitHub</span>
-                <span class="skill-tag">UI/UX Design</span>
-                <span class="skill-tag">Problem Solving</span>
+        <!-- Mediums / Strumenti dell'artista -->
+        <section id="media" class="glass-card">
+            <div class="card-header">
+                <span class="code-tag">SYSTEM // 02</span>
+                <h2>Linguaggi & Mediums</h2>
+            </div>
+            <div class="tags-container">
+                <span class="tag">Arte Digitale</span>
+                <span class="tag">3D & Generativo</span>
+                <span class="tag">Pittura Astratta</span>
+                <span class="tag">Visual Immersivi</span>
+                <span class="tag">Concept Art</span>
+                <span class="tag">Sound Design</span>
             </div>
         </section>
 
-        <!-- Sezione Progetti -->
-        <section id="progetti" class="card-section">
-            <h2>Progetti In Evidenza</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Progetto Principale</h3>
-                        <p>Breve descrizione del progetto. Spiega cosa fa, quali problemi risolve e quali tecnologie hai utilizzato per realizzarlo.</p>
-                        <a href="#" class="project-link">Scopri di più &rarr;</a>
+        <!-- Galleria Opere -->
+        <section id="opere" class="glass-card">
+            <div class="card-header">
+                <span class="code-tag">SYSTEM // 03</span>
+                <h2>Galleria & Archivi</h2>
+            </div>
+            <div class="art-grid">
+                <!-- Opera 1 -->
+                <div class="art-card">
+                    <div class="art-placeholder">
+                        <span class="art-number">#001</span>
+                    </div>
+                    <div class="art-info">
+                        <h3>Frammenti D'Ombra</h3>
+                        <p>Studio sulla percezione della luce e della materia in spazi non euclidei.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Secondo Progetto</h3>
-                        <p>Descrizione di un'altra tua esperienza o lavoro rilevante. Mostra le tue capacità pratiche.</p>
-                        <a href="#" class="project-link">Scopri di più &rarr;</a>
+                <!-- Opera 2 -->
+                <div class="art-card">
+                    <div class="art-placeholder alt-glow">
+                        <span class="art-number">#002</span>
+                    </div>
+                    <div class="art-info">
+                        <h3>Oltre il Segnale</h3>
+                        <p>Esplorazione visiva del rumore digitale e delle frequenze nascoste.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sezione Contatti -->
-        <section id="contatti" class="card-section contact-section">
-            <h2>Mettiamoci in Contatto</h2>
-            <p>Hai un progetto in mente o vuoi semplicemente fare due chiacchiere? Mandami un messaggio!</p>
-            <div class="contact-links">
-                <a href="mailto:tuamail@example.com" class="btn btn-primary">Invia una Mail</a>
-                <a href="https://linkedin.com" target="_blank" class="btn btn-secondary">LinkedIn</a>
+        <!-- Contatti -->
+        <section id="contatti" class="glass-card contact-card">
+            <div class="card-header">
+                <span class="code-tag">SYSTEM // 04</span>
+                <h2>Invia un Segnale</h2>
+            </div>
+            <p>Sei interessato a collaborazioni, collezioni private o progetti su misura?</p>
+            <div class="contact-actions">
+                <a href="mailto:tuamail@example.com" class="btn btn-neon">Invia Email</a>
+                <a href="https://instagram.com" target="_blank" class="btn btn-ghost">Instagram</a>
             </div>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 Michele Lorusso — Realizzato su GitHub Pages</p>
+        <p>[ MICHELE LORUSSO &copy; ALL RIGHTS RESERVED ]</p>
     </footer>
 
 </body>
