@@ -1,13 +1,16 @@
 :root {
     --bg-color: #0a0a0c;
     --card-bg: #111115;
-    --text-primary: #dcdde1;
-    --text-muted: #6e707d;
-    --border-color: #22222a;
     
-    /* Lilla tenue/desaturato per accenti eleganti */
-    --accent-lilac: #e6e1f7;
-    --accent-muted: #b5afcd;
+    /* Testo */
+    --text-white: #ffffff;
+    --text-muted: #a0a0b0;
+    
+    /* Elementi Grafici: Lilla Chiaro */
+    --graphic-lilac: #d4cbf2;
+    --graphic-lilac-soft: rgba(212, 203, 242, 0.4);
+    --border-lilac: rgba(212, 203, 242, 0.25);
+    --card-border-lilac: rgba(212, 203, 242, 0.35);
 }
 
 * {
@@ -22,7 +25,7 @@ html {
 
 body {
     background-color: var(--bg-color);
-    color: var(--text-primary);
+    color: var(--text-white);
     font-family: 'JetBrains Mono', monospace;
     line-height: 1.6;
     font-size: 0.9rem;
@@ -33,31 +36,31 @@ body {
 .header {
     max-width: 800px;
     margin: 40px auto 30px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-lilac);
     padding-bottom: 25px;
 }
 
+/* Grafica ASCII Banner in Lilla Chiaro */
 .ascii-banner {
     font-family: 'Space Mono', monospace;
-    color: var(--accent-lilac);
+    color: var(--graphic-lilac);
     font-size: 0.65rem;
     line-height: 1.1;
     margin-bottom: 25px;
     overflow-x: auto;
     white-space: pre;
-    opacity: 0.85;
 }
 
 .header-info h1 {
     font-family: 'Space Mono', monospace;
     font-size: 1.6rem;
     letter-spacing: 2px;
-    color: #ffffff;
+    color: var(--text-white);
     font-weight: 700;
 }
 
 .role {
-    color: var(--accent-lilac);
+    color: var(--graphic-lilac);
     margin-top: 5px;
     font-size: 0.85rem;
 }
@@ -72,7 +75,7 @@ body {
 .nav {
     max-width: 800px;
     margin: 0 auto 40px;
-    border-bottom: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border-lilac);
     padding-bottom: 15px;
 }
 
@@ -84,17 +87,17 @@ body {
 }
 
 .nav a {
-    color: var(--text-muted);
+    color: var(--graphic-lilac);
     text-decoration: none;
     font-size: 0.8rem;
-    transition: color 0.2s;
+    transition: opacity 0.2s;
 }
 
 .nav a:hover {
-    color: var(--accent-lilac);
+    opacity: 0.7;
 }
 
-/* Struttura Principale */
+/* Struttura Principale & Schede */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -103,14 +106,14 @@ body {
 .block {
     margin-bottom: 50px;
     background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--card-border-lilac);
     padding: 25px;
     border-radius: 2px;
 }
 
 .tag {
     font-size: 0.75rem;
-    color: var(--accent-muted);
+    color: var(--graphic-lilac);
     display: block;
     margin-bottom: 10px;
 }
@@ -118,18 +121,18 @@ body {
 h2 {
     font-family: 'Space Mono', monospace;
     font-size: 1.2rem;
-    color: #ffffff;
+    color: var(--text-white);
     margin-bottom: 15px;
     font-weight: 700;
 }
 
 .content-text p {
-    color: var(--text-primary);
+    color: var(--text-white);
     margin-bottom: 12px;
     font-size: 0.85rem;
 }
 
-/* Audio List */
+/* Lista Audio */
 .item-list {
     display: flex;
     flex-direction: column;
@@ -138,7 +141,7 @@ h2 {
 }
 
 .item {
-    border-left: 2px solid var(--border-color);
+    border-left: 2px solid var(--graphic-lilac);
     padding-left: 15px;
 }
 
@@ -149,28 +152,29 @@ h2 {
 }
 
 .title {
-    color: var(--accent-lilac);
+    color: var(--text-white);
     font-weight: 600;
 }
 
 .date {
-    color: var(--text-muted);
+    color: var(--graphic-lilac);
     font-size: 0.75rem;
 }
 
 .desc {
-    color: var(--text-muted);
+    color: var(--text-white);
     font-size: 0.8rem;
     margin-bottom: 10px;
+    opacity: 0.9;
 }
 
 .custom-audio {
     width: 100%;
     height: 30px;
-    filter: invert(0.9) opacity(0.7);
+    filter: invert(0.9) hue-rotate(220deg) opacity(0.8);
 }
 
-/* Visual Grid & ASCII Box */
+/* Visual Grid & Grafica ASCII Box */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -179,55 +183,62 @@ h2 {
 }
 
 .grid-card {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--card-border-lilac);
     padding: 15px;
     background: #0a0a0c;
 }
 
 .ascii-box {
     font-family: 'Space Mono', monospace;
-    color: var(--accent-muted);
+    color: var(--graphic-lilac);
     font-size: 0.7rem;
     white-space: pre;
     text-align: center;
     padding: 15px 0;
-    background: #15151b;
+    background: #14121a;
+    border: 1px solid var(--border-lilac);
     margin-bottom: 12px;
 }
 
 .card-info h3 {
     font-size: 0.9rem;
-    color: var(--text-primary);
+    color: var(--text-white);
     margin-bottom: 5px;
 }
 
 .card-info p {
-    color: var(--text-muted);
+    color: var(--text-white);
     font-size: 0.75rem;
+    opacity: 0.85;
 }
 
-/* Liste Pulite */
+/* Liste ed Elementi Grafici di Puntamento */
 .clean-list {
     list-style: none;
     margin-top: 10px;
 }
 
 .clean-list li {
-    color: var(--text-primary);
+    color: var(--text-white);
     font-size: 0.85rem;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
-/* Contact */
+.clean-list li .bullet {
+    color: var(--graphic-lilac);
+    margin-right: 6px;
+}
+
+/* Contatti e Link */
 .contact-links {
     margin-top: 15px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .contact-links a {
-    color: var(--accent-lilac);
+    color: var(--graphic-lilac);
     text-decoration: none;
     font-size: 0.85rem;
     transition: opacity 0.2s;
@@ -242,10 +253,11 @@ h2 {
     max-width: 800px;
     margin: 40px auto 20px;
     text-align: center;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-lilac);
     padding-top: 20px;
-    color: var(--text-muted);
+    color: var(--text-white);
     font-size: 0.7rem;
+    opacity: 0.8;
 }
 
 /* Layout Mobile */
