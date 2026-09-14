@@ -3,120 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michele Lorusso — Visual Artist</title>
+    <title>Michele Lorusso — Electroacoustic & Visual Works</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Monospace: Space Mono -->
+    <!-- Font Monospaziati Squadrati -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=display" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigazione minimale -->
-    <nav class="navbar">
-        <a href="#" class="brand">MICHELE LORUSSO<span class="accent-dot">.</span></a>
-        <div class="nav-menu">
-            <a href="#opere">01/OPERE</a>
-            <a href="#poetica">02/POETICA</a>
-            <a href="#biografia">03/BIO</a>
-            <a href="#contatti">04/CONTATTI</a>
-        </div>
-    </nav>
-
-    <!-- Header / Introduzione -->
-    <header class="hero">
-        <div class="hero-inner">
-            <p class="hero-label">// RICERCA FORMALE E ARTE VISIVA</p>
-            <h1 class="hero-title">MICHELE LORUSSO</h1>
-            <p class="hero-sub">Esplorazione visiva tra struttura, spazio e percezione.</p>
+    <header class="header">
+        <!-- ASCII Art Banner minimalista -->
+        <pre class="ascii-banner">
+┌─┐┬  ┌─┐┌┬┐┬─┐┌─┐┌─┐┌─┐┬─┐┌┬┐┬┌─┐  ┼  ┬  ┬┬─┐┬─┐┌─┐┌─┐
+├┤ │  ├┤  │ ├┬┘│ │├─┤│  │ │ │ ││    │  └┐┌┘├┬┘├┬┘│ │└─┐
+└─┘┴─┘└─┘ ┴ ┴└─└─┘┴ ┴└─┘┴└─ ┴ ┴└─┘  ┴   └┘ ┴└─┴└─└─┘└─┘
+        </pre>
+        <div class="header-info">
+            <h1>MICHELE LORUSSO</h1>
+            <p class="role">[ Electroacoustic Composer / Visual Artist ]</p>
+            <p class="loc">LOC: Bari / Italy — 41.1172° N, 16.8719° E</p>
         </div>
     </header>
 
+    <nav class="nav">
+        <ul>
+            <li><a href="#statement">// 01_RESEARCH</a></li>
+            <li><a href="#audio">// 02_AUDIO_WORKS</a></li>
+            <li><a href="#visual">// 03_VISUAL_WORKS</a></li>
+            <li><a href="#publications">// 04_RESEARCH_LOG</a></li>
+            <li><a href="#contact">// 05_CONTACT</a></li>
+        </ul>
+    </nav>
+
     <main class="container">
 
-        <!-- Galleria Opere -->
-        <section id="opere" class="section">
-            <div class="section-label">[ 01 / SELEZIONE OPERE ]</div>
-            
-            <div class="gallery-grid">
-                <!-- Opera 1 -->
-                <article class="gallery-item">
-                    <div class="image-frame">
-                        <div class="placeholder-art">
-                            <span>[ OPERA_01.JPG ]</span>
-                        </div>
-                    </div>
-                    <div class="item-details">
-                        <h3 class="item-title">Senza Titolo I</h3>
-                        <p class="item-meta">2026 — Tecnica mista su tela, 150x120 cm</p>
-                    </div>
-                </article>
-
-                <!-- Opera 2 -->
-                <article class="gallery-item">
-                    <div class="image-frame">
-                        <div class="placeholder-art">
-                            <span>[ OPERA_02.JPG ]</span>
-                        </div>
-                    </div>
-                    <div class="item-details">
-                        <h3 class="item-title">Struttura Nomade</h3>
-                        <p class="item-meta">2025 — Installazione digitale, dimensioni variabili</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <hr class="divider">
-
-        <!-- Poetica / Ricerca -->
-        <section id="poetica" class="section text-section">
-            <div class="section-label">[ 02 / POETICA ]</div>
-            <blockquote class="statement">
-                «La pratica artistica si articola nell'intersezione tra la forma pura e la memoria dello spazio. L'opera non risponde a una necessità descrittiva, ma si configura come un dispositivo percettivo aperto.»
-            </blockquote>
-        </section>
-
-        <hr class="divider">
-
-        <!-- Biografia e Mostre -->
-        <section id="biografia" class="section biografia-grid">
-            <div>
-                <div class="section-label">[ 03 / BIOGRAFIA ]</div>
-                <p class="bio-text">
-                    Michele Lorusso è un artista visivo la cui ricerca si concentra sullo studio dei linguaggi astratti e sulla tensione tra spazio fisico e concettuale. La sua produzione spazia dalle arti visive tradizionali alle sperimentazioni mediali contemporanee.
+        <!-- Statement / Ricerca -->
+        <section id="statement" class="block">
+            <span class="tag">[01_RESEARCH]</span>
+            <h2>Statement / Ricerca</h2>
+            <div class="content-text">
+                <p>
+                    La mia pratica artistica e di ricerca si colloca all'intersezione tra la composizione elettroacustica, l'elaborazione del segnale digitale e la visual art generativa.
+                </p>
+                <p>
+                    Attraverso la manipolazione del suono acusmatico, il spatial audio e algoritmi per la produzione visiva, la mia ricerca esplora la percezione dello spazio acustico, la risonanza della materia e le strutture simbolico-formali nel dominio temporale.
                 </p>
             </div>
-            <div>
-                <div class="section-label">[ ESPOSIZIONI ]</div>
-                <ul class="exhibitions-list">
-                    <li><span class="year">2026</span> — <em>Spazi Liminali</em>, Personale, Milano</li>
-                    <li><span class="year">2025</span> — <em>Rilevamenti Formali</em>, Collettiva, Roma</li>
-                    <li><span class="year">2024</span> — <em>Progetto Galleria Aperta</em>, Venezia</li>
-                </ul>
+        </section>
+
+        <!-- Audio Works -->
+        <section id="audio" class="block">
+            <span class="tag">[02_AUDIO_WORKS]</span>
+            <h2>Composizioni & Audio</h2>
+
+            <div class="item-list">
+                <div class="item">
+                    <div class="item-header">
+                        <span class="title">Frequenze di Risonanza</span>
+                        <span class="date">[2026]</span>
+                    </div>
+                    <p class="desc">Per nastro acusmatico a 8 canali, sintesi granulare e fortepiano preparato.</p>
+                    <audio controls class="custom-audio">
+                        <source src="audio1.mp3" type="audio/mpeg">
+                        Player non supportato dal browser.
+                    </audio>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="title">Emergence of Musical Content</span>
+                        <span class="date">[2025]</span>
+                    </div>
+                    <p class="desc">Studio computazionale sulla sintesi del suono e modelli di composizione algoritmica.</p>
+                    <audio controls class="custom-audio">
+                        <source src="audio2.mp3" type="audio/mpeg">
+                        Player non supportato dal browser.
+                    </audio>
+                </div>
             </div>
         </section>
 
-        <hr class="divider">
+        <!-- Visual Works -->
+        <section id="visual" class="block">
+            <span class="tag">[03_VISUAL_WORKS]</span>
+            <h2>Opere Visive & Installazioni</h2>
 
-        <!-- Contatti -->
-        <section id="contatti" class="section contact-section">
-            <div class="section-label">[ 04 / CONTATTI & CATALOGO ]</div>
-            <p class="contact-lead">Per acquisizioni, consultazione del portfolio completo o proposte curatoriali:</p>
-            
-            <div class="contact-links">
-                <a href="mailto:studio@michelelorusso.com" class="direct-link">studio@michelelorusso.com</a>
-                <div class="social-links">
-                    <a href="#" target="_blank">INSTAGRAM ↗</a>
-                    <a href="#" target="_blank">PORTFOLIO.PDF ↗</a>
+            <div class="grid">
+                <div class="grid-card">
+                    <div class="ascii-box">
+┌─────────────────┐
+│  . . : : : : .  │
+│ . : ░░▒▒▓▓▒▒░░ : │
+│  . : : : : . .  │
+└─────────────────┘
+                    </div>
+                    <div class="card-info">
+                        <h3>[V-01] Spectral Analysis</h3>
+                        <p>Visualizzazione in tempo reale dello spettro acustico per proiezioni multicanale.</p>
+                    </div>
                 </div>
+
+                <div class="grid-card">
+                    <div class="ascii-box">
+┌─────────────────┐
+│ / / / / / / / / │
+│ \ \ \ \ \ \ \ \ │
+│ / / / / / / / / │
+└─────────────────┘
+                    </div>
+                    <div class="card-info">
+                        <h3>[V-02] Waveform Structure</h3>
+                        <p>Installazione generativa basata sulla diffrazione della luce ed eco acustica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Research -->
+        <section id="publications" class="block">
+            <span class="tag">[04_RESEARCH_LOG]</span>
+            <h2>Ambienti di Lavoro & Strumenti</h2>
+            <ul class="clean-list">
+                <li>> Max/MSP / Pure Data / Csound</li>
+                <li>> Algorithmic Composition & DSP</li>
+                <li>> Spatial Audio & Acousmatics</li>
+                <li>> Real-time Visuals & Generative Systems</li>
+            </ul>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="block">
+            <span class="tag">[05_CONTACT]</span>
+            <h2>Contatto</h2>
+            <p>Per richieste di spartiti, collaborazione a progetti audio-visivi o performance live:</p>
+            <div class="contact-links">
+                <a href="mailto:tuamail@example.com">[EMAIL: contact@michelelorusso.com]</a>
+                <a href="https://github.com" target="_blank">[GITHUB]</a>
+                <a href="https://soundcloud.com" target="_blank">[SOUNDCLOUD]</a>
             </div>
         </section>
 
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 MICHELE LORUSSO — ALL RIGHTS RESERVED</p>
+        <p>MICHELE LORUSSO — ALL RIGHTS RESERVED © 2026</p>
     </footer>
 
 </body>
