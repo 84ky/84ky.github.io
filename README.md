@@ -54,3 +54,13 @@ npx --yes prettier@3.6.2 --write '*.html' '*.css' '*.js' README.md .prettierrc.j
 Il comando scarica il formatter se necessario; il sito continua a funzionare senza
 Node.js e senza compilazione. Il blocco ASCII nella Home è escluso dalla
 formattazione automatica: i suoi spazi fanno parte del disegno.
+
+### Animazione sopra il footer NES
+
+`nes-footer.js` disegna Mario e un Goomba in pixel art su una scena trasparente
+prima del footer. Il bordo superiore dei mattoni del footer fa da pavimento. In testa al file trovi la
+palette e le matrici dei personaggi; nella funzione `draw()` puoi cambiare velocità,
+percorso e altezza dei salti. Il contenitore è nella sezione `20` di `style.css`.
+La scena compare solo nel tema NES e si ferma quando non è visibile. Il pulsante
+permette di metterla in pausa; con la preferenza di sistema per il movimento ridotto
+parte ferma e può essere avviata manualmente.
