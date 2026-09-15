@@ -27,3 +27,30 @@ Lo stile condiviso è in `style.css`. La navigazione è presente in tutti e cinq
 ## Temi
 
 Il selettore nella barra superiore offre Nero / lilla (predefinito), Bianco / lilla e Super Mario / NES. La preferenza viene salvata nel browser e applicata a tutte le pagine. `theme.js` ripristina la scelta prima del caricamento dello stile; `script.js` gestisce il selettore. Se lo storage non è disponibile, il cambio funziona sulla pagina corrente. I colori e gli elementi decorativi dei temi sono in fondo a `style.css`. I player esterni mantengono l’aspetto del rispettivo provider.
+
+## Guida rapida alle modifiche
+
+| Cosa vuoi cambiare                 | Dove intervenire                                                         |
+| ---------------------------------- | ------------------------------------------------------------------------ |
+| Testi, titoli e descrizioni        | Nel file HTML della pagina, sotto `CONTENUTO DELLA PAGINA`               |
+| Opere del portfolio                | In `works.html`, una scheda per ogni blocco `<article>`                  |
+| Link dei player                    | In `script.js`, sezione `CONTENUTI MODIFICABILI`                         |
+| Colori del tema predefinito        | In `style.css`, sezione `01. COLORI PREDEFINITI`                         |
+| Colori degli altri temi            | In `style.css`, sezioni `16. TEMA CHIARO` e `18. TEMA SUPER MARIO / NES` |
+| Spaziature, caratteri e dimensioni | Nella sezione numerata del componente in `style.css`                     |
+| Regole per tablet e telefoni       | Nelle sezioni responsive `15` e `19` di `style.css`                      |
+| Menu e selettore                   | Nel blocco `BARRA SUPERIORE` di tutti i file HTML                        |
+
+### Formattazione
+
+I file usano due spazi per ogni livello di indentazione. `.editorconfig` fornisce
+queste impostazioni agli editor compatibili e `.prettierrc.json` configura Prettier.
+Per riordinare automaticamente il codice dopo le modifiche, con Node.js installato:
+
+```sh
+npx --yes prettier@3.6.2 --write '*.html' '*.css' '*.js' README.md .prettierrc.json
+```
+
+Il comando scarica il formatter se necessario; il sito continua a funzionare senza
+Node.js e senza compilazione. Il blocco ASCII nella Home è escluso dalla
+formattazione automatica: i suoi spazi fanno parte del disegno.
