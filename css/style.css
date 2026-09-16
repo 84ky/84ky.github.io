@@ -470,6 +470,7 @@ figcaption {
   border: 0;
 }
 .soundcloud-preview {
+  min-height: 280px;
   background-position: center;
   background-size: cover;
 }
@@ -477,11 +478,15 @@ figcaption {
   display: none;
 }
 .soundcloud-preview.has-soundcloud-player iframe {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 74px;
+  position: static;
+  height: 166px;
+  background: transparent;
+  border-top: 1px solid var(--line);
+}
+.soundcloud-preview.has-soundcloud-player {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .media-actions {
   position: absolute;

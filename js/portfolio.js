@@ -35,7 +35,6 @@ document.querySelectorAll('.media-trigger').forEach((button) => {
     const player = document.createElement('iframe');
     player.src = button.dataset.embedUrl;
     player.title = button.dataset.mediaTitle;
-    player.loading = 'lazy';
     player.allow = 'autoplay; encrypted-media; picture-in-picture';
     player.allowFullscreen = true;
 
