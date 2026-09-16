@@ -1,6 +1,26 @@
 // FILTRI DEL PORTFOLIO — le categorie sono negli attributi data-category di works.html.
 const filters = document.querySelectorAll('[data-filter]');
 const works = document.querySelectorAll('[data-category]');
+const workList = document.querySelector('.work-list');
+
+// ORDINE CRONOLOGICO — data-date usa il formato YYYY-MM-DD. Le schede senza
+// data restano in fondo, nell'ordine in cui compaiono nel codice.
+if (workList) {
+  [...works]
+    .sort((first, second) => {
+      const firstDate = Date.parse(first.dataset.date || '') || 0;
+      const secondDate = Date.parse(second.dataset.date || '') || 0;
+
+      return secondDate - firstDate;
+    })
+    .forEach((work, index) => {
+      workList.append(work);
+      work.querySelector('.template-index').textContent = String(index + 1).padStart(
+        2,
+        '0',
+      );
+    });
+}
 
 filters.forEach((button) => {
   button.addEventListener('click', () => {
