@@ -5,116 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Michele Lorusso — composizione elettroacustica, visual e ricerca."
+      content="Michele Lorusso — composizione elettroacustica, visual art e ricerca. Portfolio di lavori e progetti."
     />
+    <meta name="theme-color" content="#111114" />
     <title>Research — Michele Lorusso</title>
-    <script src="theme.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <script src="nes-footer.js" defer></script>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/portfolio.js" defer></script>
   </head>
-  <body>
+  <body class="inner-page">
     <a class="skip-link" href="#main">Salta al contenuto</a>
-    <!-- BARRA SUPERIORE — navigazione e selettore del tema (comune a tutte le pagine) -->
-    <header class="topbar">
-      <a class="brand" href="index.html" aria-label="Michele Lorusso, Home">
-        ML
-        <span>_</span>
+    <!-- NAVIGAZIONE — condivisa tra tutte le pagine -->
+    <header class="site-header">
+      <a class="wordmark" href="index.html">
+        Michele Lorusso
+        <span>Sound & visual artist</span>
       </a>
-      <!-- Navigazione: aggiornare gli stessi link in tutte le pagine. -->
       <nav aria-label="Navigazione principale">
-        <a href="index.html">
-          <span>00</span>
-          Home
-        </a>
-        <a href="works.html">
-          <span>01</span>
-          Works
-        </a>
-        <a href="commissions.html">
-          <span>02</span>
-          Commissions
-        </a>
-        <a href="research.html" aria-current="page">
-          <span>03</span>
-          Research
-        </a>
-        <a href="bio.html">
-          <span>04</span>
-          Bio and contacts
-        </a>
+        <a href="index.html">Home</a>
+        <a href="works.html">Works</a>
+        <a href="commissions.html">Commissions</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="bio.html">Bio & contacts</a>
       </nav>
-      <!-- Selettore tema: i valori corrispondono a theme.js e script.js. -->
-      <label class="theme-picker" for="theme-select">
-        <span>TEMA</span>
-        <select id="theme-select" aria-label="Tema del sito">
-          <option value="dark">Nero / lilla</option>
-          <option value="light">Bianco / lilla</option>
-          <option value="nes">Super Mario / NES</option>
-        </select>
-      </label>
     </header>
-
-    <!-- CONTENUTO DELLA PAGINA — modifica qui testi e progetti -->
     <main id="main">
-      <div class="page-marker">
-        <span>MICHELE LORUSSO / RESEARCH</span>
-        <span>[ 03 / 04 ]</span>
-      </div>
-      <section class="page-heading">
-        <p class="eyebrow">[ ARCHIVIO IN COSTRUZIONE ]</p>
-        <!-- prettier-ignore -->
-        <h1>Research<span class="accent">_</span></h1>
-        <p class="intro">
-          Appunti, pubblicazioni e strumenti tra suono, immagine e codice.
+      <header class="page-heading wrap">
+        <p class="eyebrow">RICERCA / PROCESSO</p>
+        <h1>Research</h1>
+        <p class="page-intro">
+          Idee, strumenti e documenti intorno alla pratica artistica.
         </p>
-      </section>
-      <!-- RICERCA — paper, poster, talk e codice -->
-      <div class="research-list">
-        <section class="research-row">
-          <span class="eyebrow">01 / PAPER</span>
+      </header>
+      <section class="wrap section research-section">
+        <div class="research-intro">
+          <p>Uno spazio per condividere il processo, oltre all’opera finita.</p>
+          <p class="muted">
+            Paper, poster, talk e progetti software sono raccolti insieme per rendere
+            leggibile il rapporto tra sperimentazione e pratica.
+          </p>
+        </div>
+        <article class="research-row">
+          <span class="eyebrow">PAPER</span>
           <div>
             <h2>Titolo della pubblicazione</h2>
-            <p class="muted">Placeholder — autori, anno e descrizione da inserire.</p>
+            <p>Autori · anno · rivista o conferenza</p>
           </div>
-          <span class="status">DOCUMENTAZIONE DA AGGIUNGERE</span>
-        </section>
-        <section class="research-row">
-          <span class="eyebrow">02 / POSTER</span>
+          <span class="document-status">Documento da inserire</span>
+        </article>
+        <article class="research-row">
+          <span class="eyebrow">POSTER</span>
           <div>
             <h2>Titolo del poster</h2>
-            <p class="muted">Placeholder — autori, anno e descrizione da inserire.</p>
+            <p>Evento · anno · contributo</p>
           </div>
-          <span class="status">DOCUMENTAZIONE DA AGGIUNGERE</span>
-        </section>
-        <section class="research-row">
-          <span class="eyebrow">03 / TALK</span>
+          <span class="document-status">Documento da inserire</span>
+        </article>
+        <article class="research-row">
+          <span class="eyebrow">TALK</span>
           <div>
             <h2>Titolo dell’intervento</h2>
-            <p class="muted">Placeholder — autori, anno e descrizione da inserire.</p>
+            <p>Contesto · data · registrazione</p>
           </div>
-          <span class="status">DOCUMENTAZIONE DA AGGIUNGERE</span>
-        </section>
-        <section class="research-row">
-          <span class="eyebrow">04 / CODE / GITHUB</span>
+          <span class="document-status">Documento da inserire</span>
+        </article>
+        <article class="research-row">
+          <span class="eyebrow">CODE</span>
           <div>
-            <h2>Nome del progetto di ricerca</h2>
-            <p class="muted">Placeholder — autori, anno e descrizione da inserire.</p>
+            <h2>Nome del progetto GitHub</h2>
+            <p>Strumenti · documentazione · repository</p>
           </div>
-          <span class="status">REPOSITORY DA AGGIUNGERE</span>
-        </section>
-      </div>
-      <p class="section-note">
-        [ CODE / GITHUB ] I progetti software legati alla ricerca sono raccolti qui,
-        accanto alla loro documentazione.
-      </p>
+          <span class="document-status">Documento da inserire</span>
+        </article>
+      </section>
     </main>
-
-    <!-- PIÈ DI PAGINA -->
-    <footer>
-      <span>© 2026 MICHELE LORUSSO</span>
-      <span>COMPOSITION · VISUALS · RESEARCH</span>
-      <a href="#main">TORNA SU ↑</a>
+    <!-- CONTATTI — sostituire i segnaposto nella pagina Bio & contacts -->
+    <footer class="site-footer">
+      <div class="footer-intro">
+        <p class="eyebrow">UN NUOVO DIALOGO</p>
+        <a class="footer-cta" href="bio.html#contacts">
+          Diamo forma
+          <br />
+          a un’idea.
+          <span>↗</span>
+        </a>
+      </div>
+      <div class="footer-nav">
+        <a href="works.html">Works</a>
+        <a href="commissions.html">Commissions</a>
+        <a href="research.html">Research</a>
+        <a href="bio.html">Bio & contacts</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Michele Lorusso</span>
+        <span>Sound. Image. In between.</span>
+        <a href="#main">Torna su ↑</a>
+      </div>
     </footer>
   </body>
 </html>

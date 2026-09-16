@@ -5,115 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Michele Lorusso — composizione elettroacustica, visual e ricerca."
+      content="Michele Lorusso — composizione elettroacustica, visual art e ricerca. Portfolio di lavori e progetti."
     />
-    <title>Bio and contacts — Michele Lorusso</title>
-    <script src="theme.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <script src="nes-footer.js" defer></script>
+    <meta name="theme-color" content="#111114" />
+    <title>Bio & contacts — Michele Lorusso</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/portfolio.js" defer></script>
   </head>
-  <body>
+  <body class="inner-page">
     <a class="skip-link" href="#main">Salta al contenuto</a>
-    <!-- BARRA SUPERIORE — navigazione e selettore del tema (comune a tutte le pagine) -->
-    <header class="topbar">
-      <a class="brand" href="index.html" aria-label="Michele Lorusso, Home">
-        ML
-        <span>_</span>
+    <!-- NAVIGAZIONE — condivisa tra tutte le pagine -->
+    <header class="site-header">
+      <a class="wordmark" href="index.html">
+        Michele Lorusso
+        <span>Sound & visual artist</span>
       </a>
-      <!-- Navigazione: aggiornare gli stessi link in tutte le pagine. -->
       <nav aria-label="Navigazione principale">
-        <a href="index.html">
-          <span>00</span>
-          Home
-        </a>
-        <a href="works.html">
-          <span>01</span>
-          Works
-        </a>
-        <a href="commissions.html">
-          <span>02</span>
-          Commissions
-        </a>
-        <a href="research.html">
-          <span>03</span>
-          Research
-        </a>
-        <a href="bio.html" aria-current="page">
-          <span>04</span>
-          Bio and contacts
-        </a>
+        <a href="index.html">Home</a>
+        <a href="works.html">Works</a>
+        <a href="commissions.html">Commissions</a>
+        <a href="research.html">Research</a>
+        <a href="bio.html" aria-current="page">Bio & contacts</a>
       </nav>
-      <!-- Selettore tema: i valori corrispondono a theme.js e script.js. -->
-      <label class="theme-picker" for="theme-select">
-        <span>TEMA</span>
-        <select id="theme-select" aria-label="Tema del sito">
-          <option value="dark">Nero / lilla</option>
-          <option value="light">Bianco / lilla</option>
-          <option value="nes">Super Mario / NES</option>
-        </select>
-      </label>
     </header>
-
-    <!-- CONTENUTO DELLA PAGINA — modifica qui testi e progetti -->
     <main id="main">
-      <div class="page-marker">
-        <span>MICHELE LORUSSO / BIO AND CONTACTS</span>
-        <span>[ 04 / 04 ]</span>
-      </div>
-      <section class="page-heading">
-        <p class="eyebrow">[ ARCHIVIO IN COSTRUZIONE ]</p>
-        <!-- prettier-ignore -->
-        <h1>Bio and contacts<span class="accent">_</span></h1>
-        <p class="intro">Pratica artistica, percorso e collaborazioni.</p>
+      <header class="page-heading wrap">
+        <p class="eyebrow">PROFILO / CONTATTI</p>
+        <h1>Michele Lorusso</h1>
+        <p class="page-intro">Compositore elettroacustico e visual artist.</p>
+      </header>
+      <section class="wrap bio-layout">
+        <div class="bio-visual">
+          <img
+            src="assets/particles.svg"
+            width="1400"
+            height="1000"
+            alt="Campo di particelle, studio visivo dimostrativo"
+          />
+          <p class="eyebrow">STUDIO VISIVO / IMMAGINE PROVVISORIA</p>
+        </div>
+        <div class="bio-text">
+          <p class="eyebrow">BIOGRAFIA</p>
+          <h2>
+            Tra suono,
+            <br />
+            spazio e immagine.
+          </h2>
+          <p>
+            Una pratica artistica all’intersezione tra composizione elettroacustica,
+            elaborazione del suono e visual art.
+          </p>
+          <p class="muted">
+            La biografia completa sarà inserita qui: formazione, percorso artistico,
+            collaborazioni e una selezione di esperienze rilevanti.
+          </p>
+          <p class="document-status">CV e press kit da aggiungere</p>
+        </div>
       </section>
-      <!-- BIOGRAFIA E CONTATTI -->
-      <div class="bio-grid">
-        <section class="bio-copy">
-          <p class="eyebrow">[ BIO / BOZZA ]</p>
-          <h2>Michele Lorusso</h2>
-          <p>Compositore elettroacustico e visual artist.</p>
-          <p class="muted">
-            Qui inserire una breve biografia: percorso formativo, interessi artistici e di
-            ricerca, collaborazioni ed esperienze selezionate.
+      <section id="contacts" class="wrap section contacts">
+        <div>
+          <p class="eyebrow">CONTATTI</p>
+          <h2>Let’s talk.</h2>
+          <p>
+            Commissioni, collaborazioni artistiche,
+            <br />
+            ricerca e informazioni sui lavori.
           </p>
-          <p class="muted">
-            Un secondo paragrafo potrà approfondire la pratica, gli strumenti e i progetti
-            attuali.
-          </p>
-          <span class="status">CV DA AGGIUNGERE</span>
-        </section>
-        <section class="contact-box">
-          <p class="eyebrow">[ LET’S CONNECT ]</p>
-          <h2>Contatti</h2>
-          <p>Per commissioni, collaborazioni e informazioni sui lavori.</p>
-          <dl>
-            <div>
-              <dt>Email</dt>
-              <dd>Indirizzo da inserire</dd>
-            </div>
-            <div>
-              <dt>SoundCloud</dt>
-              <dd>Profilo da inserire</dd>
-            </div>
-            <div>
-              <dt>YouTube</dt>
-              <dd>Canale da inserire</dd>
-            </div>
-            <div>
-              <dt>GitHub</dt>
-              <dd>Profilo da inserire</dd>
-            </div>
-          </dl>
-        </section>
-      </div>
+        </div>
+        <dl>
+          <div>
+            <dt>Email</dt>
+            <dd>Indirizzo da inserire</dd>
+          </div>
+          <div>
+            <dt>SoundCloud</dt>
+            <dd>Profilo da inserire</dd>
+          </div>
+          <div>
+            <dt>YouTube</dt>
+            <dd>Canale da inserire</dd>
+          </div>
+          <div>
+            <dt>GitHub</dt>
+            <dd>Profilo da inserire</dd>
+          </div>
+        </dl>
+      </section>
     </main>
-
-    <!-- PIÈ DI PAGINA -->
-    <footer>
-      <span>© 2026 MICHELE LORUSSO</span>
-      <span>COMPOSITION · VISUALS · RESEARCH</span>
-      <a href="#main">TORNA SU ↑</a>
+    <!-- CONTATTI — sostituire i segnaposto nella pagina Bio & contacts -->
+    <footer class="site-footer">
+      <div class="footer-intro">
+        <p class="eyebrow">UN NUOVO DIALOGO</p>
+        <a class="footer-cta" href="bio.html#contacts">
+          Diamo forma
+          <br />
+          a un’idea.
+          <span>↗</span>
+        </a>
+      </div>
+      <div class="footer-nav">
+        <a href="works.html">Works</a>
+        <a href="commissions.html">Commissions</a>
+        <a href="research.html">Research</a>
+        <a href="bio.html">Bio & contacts</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Michele Lorusso</span>
+        <span>Sound. Image. In between.</span>
+        <a href="#main">Torna su ↑</a>
+      </div>
     </footer>
   </body>
 </html>

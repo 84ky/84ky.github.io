@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Michele Lorusso — sound and visual artist." />
+    <meta name="description" content="Events — Michele Lorusso." />
     <meta name="theme-color" content="#0c0c0f" />
-    <title>About — Michele Lorusso</title>
+    <title>Events — Michele Lorusso</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +18,6 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Vai al contenuto</a>
-    <!-- BARRA LATERALE — condivisa da About, Works, Events e Blog -->
     <aside class="sidebar">
       <a class="site-name" href="index.html">
         Michele
@@ -27,12 +26,11 @@
       </a>
       <p class="site-role">Sound &amp; visual artist</p>
       <nav aria-label="Navigazione principale">
-        <a href="index.html" aria-current="page">About</a>
+        <a href="index.html">About</a>
         <a href="works.html">Works</a>
-        <a href="events.html">Events</a>
+        <a href="events.html" aria-current="page">Events</a>
         <a href="blog.html">Blog</a>
       </nav>
-      <!-- FOOTER DELLA COLONNA — città, copyright e sole icone social -->
       <footer class="sidebar-footer">
         <p class="sidebar-meta">
           Bari, Italy
@@ -66,36 +64,40 @@
         </div>
       </footer>
     </aside>
-    <main id="main" class="page about-page">
-      <section class="about-grid">
-        <!-- FOTO — qui va bene un ritratto orizzontale o verticale, con crop libero. -->
-        <figure class="portrait-placeholder">
-          <div
-            class="portrait-frame"
-            role="img"
-            aria-label="Spazio riservato a un ritratto di Michele Lorusso"
-          >
-            <span>
-              Portrait
-              <br />
-              to insert
-            </span>
+    <main id="main" class="page events-page">
+      <!-- TEMPLATE EVENTO — duplicare questo articolo per inserire un nuovo evento. -->
+      <section class="event-list">
+        <article class="event-card">
+          <time datetime="2026-00-00">
+            <span>00</span>
+            <strong>MMM</strong>
+            <em>2026</em>
+          </time>
+          <div>
+            <p class="eyebrow">Tipo di evento</p>
+            <h2>Titolo dell’evento</h2>
+            <p>Breve descrizione: performance, installazione, presentazione o talk.</p>
           </div>
-          <figcaption>Foto ritratto / da inserire</figcaption>
-        </figure>
-        <div class="about-copy">
-          <p>
-            Qui inserirai una breve descrizione della tua ricerca: composizione
-            elettroacustica, elaborazione del segnale, visual art generativa e il rapporto
-            tra percezione, spazio e materia.
-          </p>
-          <p>
-            Il secondo paragrafo può raccontare il tuo approccio, i metodi di lavoro e le
-            collaborazioni. Mantieni il testo tra 100 e 180 parole per una lettura
-            efficace.
-          </p>
-        </div>
+          <dl>
+            <div>
+              <dt>Luogo</dt>
+              <dd>Venue / città</dd>
+            </div>
+            <div>
+              <dt>Ruolo</dt>
+              <dd>Da inserire</dd>
+            </div>
+            <div>
+              <dt>Info</dt>
+              <dd>Link da inserire ↗</dd>
+            </div>
+          </dl>
+        </article>
       </section>
+      <p class="template-hint">
+        Template evento: aggiungi data, luogo, ruolo, una breve descrizione e un link per
+        approfondire o acquistare il biglietto.
+      </p>
     </main>
   </body>
 </html>

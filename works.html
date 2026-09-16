@@ -3,140 +3,393 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Michele Lorusso — composizione elettroacustica, visual e ricerca."
-    />
+    <meta name="description" content="Works — Michele Lorusso." />
+    <meta name="theme-color" content="#0c0c0f" />
     <title>Works — Michele Lorusso</title>
-    <script src="theme.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <script src="nes-footer.js" defer></script>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/portfolio.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Salta al contenuto</a>
-    <!-- BARRA SUPERIORE — navigazione e selettore del tema (comune a tutte le pagine) -->
-    <header class="topbar">
-      <a class="brand" href="index.html" aria-label="Michele Lorusso, Home">
-        ML
-        <span>_</span>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
+    <aside class="sidebar">
+      <a class="site-name" href="index.html">
+        Michele
+        <br />
+        Lorusso
       </a>
-      <!-- Navigazione: aggiornare gli stessi link in tutte le pagine. -->
+      <p class="site-role">Sound &amp; visual artist</p>
       <nav aria-label="Navigazione principale">
-        <a href="index.html">
-          <span>00</span>
-          Home
-        </a>
-        <a href="works.html" aria-current="page">
-          <span>01</span>
-          Works
-        </a>
-        <a href="commissions.html">
-          <span>02</span>
-          Commissions
-        </a>
-        <a href="research.html">
-          <span>03</span>
-          Research
-        </a>
-        <a href="bio.html">
-          <span>04</span>
-          Bio and contacts
-        </a>
+        <a href="index.html">About</a>
+        <a href="works.html" aria-current="page">Works</a>
+        <a href="events.html">Events</a>
+        <a href="blog.html">Blog</a>
       </nav>
-      <!-- Selettore tema: i valori corrispondono a theme.js e script.js. -->
-      <label class="theme-picker" for="theme-select">
-        <span>TEMA</span>
-        <select id="theme-select" aria-label="Tema del sito">
-          <option value="dark">Nero / lilla</option>
-          <option value="light">Bianco / lilla</option>
-          <option value="nes">Super Mario / NES</option>
-        </select>
-      </label>
-    </header>
-
-    <!-- CONTENUTO DELLA PAGINA — modifica qui testi e progetti -->
-    <main id="main">
-      <div class="page-marker">
-        <span>MICHELE LORUSSO / WORKS</span>
-        <span>[ 01 / 04 ]</span>
-      </div>
-      <section class="page-heading">
-        <p class="eyebrow">[ ARCHIVIO IN COSTRUZIONE ]</p>
-        <!-- prettier-ignore -->
-        <h1>Works<span class="accent">_</span></h1>
-        <p class="intro">Composizioni, esperimenti sonori e lavori audiovisivi.</p>
-      </section>
-      <!-- FILTRI — aggiornare i conteggi quando si aggiungono opere -->
-      <div class="filters" role="group" aria-label="Filtra le opere">
-        <button aria-pressed="true" data-filter="all">
+      <footer class="sidebar-footer">
+        <p class="sidebar-meta">
+          Bari, Italy
+          <br />
+          © 2026 Michele Lorusso
+        </p>
+        <div class="social-links" aria-label="Contatti e social">
+          <a
+            href="mailto:michelelorusso99@outlook.com"
+            aria-label="Email Michele Lorusso"
+            title="Email"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 5h18v14H3z" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/sudo.ml/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram di Michele Lorusso"
+            title="Instagram"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.4" cy="6.6" r="1" class="fill" />
+            </svg>
+          </a>
+        </div>
+      </footer>
+    </aside>
+    <main id="main" class="page works-page">
+      <section class="work-filters" aria-label="Filtra i lavori">
+        <button type="button" data-filter="all" aria-pressed="true">
           Tutti
-          <span>03</span>
+          <sup>09</sup>
         </button>
-        <button aria-pressed="false" data-filter="audio">
-          Audio
-          <span>01</span>
+        <button type="button" data-filter="audio" aria-pressed="false">Audio</button>
+        <button type="button" data-filter="audiovisual" aria-pressed="false">
+          Audiovideo
         </button>
-        <button aria-pressed="false" data-filter="audiovisual">
-          Audiovisivi
-          <span>02</span>
+        <button type="button" data-filter="video" aria-pressed="false">Video</button>
+        <button type="button" data-filter="installation" aria-pressed="false">
+          Installazioni
         </button>
-      </div>
-      <!-- OPERE — ogni article è una scheda; data-embed collega il player a script.js. -->
-      <div class="work-grid">
-        <article class="work-card" data-category="audio">
-          <div class="media-placeholder" data-embed="work-1">
-            <span class="media-art" aria-hidden="true">▁ ▂ ▅ ▃ ▇ ▆ ▂ ▄ ▆ █ ▃ ▁</span>
-            <span>[ SOUNDCLOUD / EMBED ]</span>
-            <small>Il player apparirà qui quando sarà aggiunto il link.</small>
-          </div>
-          <div class="card-content">
-            <p class="eyebrow">W.01 / SOUNDCLOUD</p>
-            <h2>Titolo del lavoro 01</h2>
-            <p>Composizione elettroacustica · durata da inserire</p>
-            <p class="muted">
-              Placeholder — descrizione del progetto, contesto e crediti da aggiungere.
+        <button type="button" data-filter="github" aria-pressed="false">GitHub</button>
+      </section>
+      <!-- Lavori provenienti dal portfolio precedente. I template in fondo restano pronti da compilare. -->
+      <section class="work-list">
+        <article class="work-template" data-category="audio">
+          <div class="template-index">01</div>
+          <div class="template-visual waveform"><span>∿∿∿∿∿∿∿∿∿∿</span></div>
+          <div class="template-main">
+            <p class="eyebrow">Audio</p>
+            <h2>Borders’ Genesis</h2>
+            <p>
+              Uno studio sulla struttura formale, sulla sintesi granulare e sui punti di
+              accumulazione.
             </p>
           </div>
+          <dl>
+            <div>
+              <dt>Anno</dt>
+              <dd>—</dd>
+            </div>
+            <div>
+              <dt>Ascolto</dt>
+              <dd>
+                <button
+                  class="media-trigger"
+                  type="button"
+                  data-embed-url="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fuser-545826927%2Fborders-genesis%2Fs-1TxxqsYZ9PY&amp;color=%23d8c4f2&amp;auto_play=false"
+                  data-media-title="Borders’ Genesis su SoundCloud"
+                >
+                  Ascolta qui ↗
+                </button>
+              </dd>
+            </div>
+          </dl>
         </article>
-        <article class="work-card" data-category="audiovisual">
-          <div class="media-placeholder" data-embed="work-2">
-            <span class="media-art" aria-hidden="true">+ ── [ ░▒▓ ] ── +</span>
-            <span>[ YOUTUBE / EMBED ]</span>
-            <small>Il player apparirà qui quando sarà aggiunto il link.</small>
+        <article class="work-template" data-category="audiovisual">
+          <div class="template-index">02</div>
+          <div class="template-visual">
+            <img
+              src="https://i.ytimg.com/vi/9NI-W8PqKAg/maxresdefault.jpg"
+              alt="Copertina di Event Horizon"
+              width="1400"
+              height="1000"
+            />
           </div>
-          <div class="card-content">
-            <p class="eyebrow">W.02 / YOUTUBE</p>
-            <h2>Titolo del lavoro 02</h2>
-            <p>Opera audiovisiva · durata da inserire</p>
-            <p class="muted">
-              Placeholder — descrizione del progetto, contesto e crediti da aggiungere.
+          <div class="template-main">
+            <p class="eyebrow">Audiovideo</p>
+            <h2>Event Horizon</h2>
+            <p>Generazione algoritmica audio-video. Un esercizio quotidiano.</p>
+          </div>
+          <dl>
+            <div>
+              <dt>Anno</dt>
+              <dd>—</dd>
+            </div>
+            <div>
+              <dt>Video</dt>
+              <dd>
+                <button
+                  class="media-trigger"
+                  type="button"
+                  data-embed-url="https://www.youtube-nocookie.com/embed/9NI-W8PqKAg?rel=0"
+                  data-media-title="Event Horizon su YouTube"
+                >
+                  Guarda qui ↗
+                </button>
+              </dd>
+            </div>
+          </dl>
+        </article>
+        <article class="work-template" data-category="audiovisual">
+          <div class="template-index">03</div>
+          <div class="template-visual">
+            <img
+              src="https://i.ytimg.com/vi/_D6gEwrytiI/maxresdefault.jpg"
+              alt="Copertina di Harmonia Ex Chao"
+              width="1400"
+              height="1000"
+            />
+          </div>
+          <div class="template-main">
+            <p class="eyebrow">Audiovideo</p>
+            <h2>Harmonia Ex Chao</h2>
+            <p>
+              Composizione algoritmica basata sull’analisi delle audio features,
+              realizzata con POPs di TouchDesigner.
             </p>
           </div>
+          <dl>
+            <div>
+              <dt>Anno</dt>
+              <dd>—</dd>
+            </div>
+            <div>
+              <dt>Video</dt>
+              <dd>
+                <button
+                  class="media-trigger"
+                  type="button"
+                  data-embed-url="https://www.youtube-nocookie.com/embed/_D6gEwrytiI?rel=0"
+                  data-media-title="Harmonia Ex Chao su YouTube"
+                >
+                  Guarda qui ↗
+                </button>
+              </dd>
+            </div>
+          </dl>
         </article>
-        <article class="work-card" data-category="audiovisual">
-          <div class="media-placeholder" data-embed="work-3">
-            <span class="media-art" aria-hidden="true">+ ── [ ░▒▓ ] ── +</span>
-            <span>[ YOUTUBE / EMBED ]</span>
-            <small>Il player apparirà qui quando sarà aggiunto il link.</small>
+        <article class="work-template" data-category="audiovisual">
+          <div class="template-index">04</div>
+          <div class="template-visual">
+            <img
+              src="https://i.ytimg.com/vi/YS5K2ec5zZo/hqdefault.jpg"
+              alt="Copertina di Mobius Strip"
+              width="480"
+              height="360"
+            />
           </div>
-          <div class="card-content">
-            <p class="eyebrow">W.03 / YOUTUBE</p>
-            <h2>Titolo del lavoro 03</h2>
-            <p>Visual generative · durata da inserire</p>
-            <p class="muted">
-              Placeholder — descrizione del progetto, contesto e crediti da aggiungere.
+          <div class="template-main">
+            <p class="eyebrow">Audiovideo</p>
+            <h2>Mobius Strip</h2>
+            <p>
+              Un primo risultato della ricerca sulla teoria sistemica applicata alla
+              composizione audiovisiva algoritmica.
             </p>
           </div>
+          <dl>
+            <div>
+              <dt>Anno</dt>
+              <dd>—</dd>
+            </div>
+            <div>
+              <dt>Video</dt>
+              <dd>
+                <button
+                  class="media-trigger"
+                  type="button"
+                  data-embed-url="https://www.youtube-nocookie.com/embed/YS5K2ec5zZo?rel=0"
+                  data-media-title="Mobius Strip su YouTube"
+                >
+                  Guarda qui ↗
+                </button>
+              </dd>
+            </div>
+          </dl>
         </article>
-      </div>
+        <article class="work-template" data-category="audiovisual">
+          <div class="template-index">05</div>
+          <div class="template-visual">
+            <img
+              src="https://i.ytimg.com/vi/VMVTKaQBp7E/hqdefault.jpg"
+              alt="Copertina di Andy"
+              width="480"
+              height="360"
+            />
+          </div>
+          <div class="template-main">
+            <p class="eyebrow">Audiovideo</p>
+            <h2>Andy</h2>
+            <p>
+              Ispirato dal “Robot messaggero” di Stephen King: uno studio su spazio, mix,
+              mastering e storytelling.
+            </p>
+          </div>
+          <dl>
+            <div>
+              <dt>Anno</dt>
+              <dd>—</dd>
+            </div>
+            <div>
+              <dt>Video</dt>
+              <dd>
+                <button
+                  class="media-trigger"
+                  type="button"
+                  data-embed-url="https://www.youtube-nocookie.com/embed/VMVTKaQBp7E?rel=0"
+                  data-media-title="Andy su YouTube"
+                >
+                  Guarda qui ↗
+                </button>
+              </dd>
+            </div>
+          </dl>
+        </article>
+        <article class="work-template" data-category="video">
+          <div class="template-index">06</div>
+          <div class="template-visual">
+            <img
+              src="https://i.ytimg.com/vi/p9a6ZjyqfBo/maxresdefault.jpg"
+              alt="Copertina di Hand-tracking reactive visual"
+              width="1400"
+              height="1000"
+            />
+          </div>
+          <div class="template-main">
+            <p class="eyebrow">Video</p>
+            <h2>Hand-tracking reactive visual</h2>
+            <p>
+              Video generato in tempo reale e manipolabile mediante il tracciamento delle
+              mani.
+            </p>
+          </div>
+          <dl>
+            <div>
+              <dt>Anno</dt>
+              <dd>—</dd>
+            </div>
+            <div>
+              <dt>Video</dt>
+              <dd>
+                <button
+                  class="media-trigger"
+                  type="button"
+                  data-embed-url="https://www.youtube-nocookie.com/embed/p9a6ZjyqfBo?rel=0"
+                  data-media-title="Hand-tracking reactive visual su YouTube"
+                >
+                  Guarda qui ↗
+                </button>
+              </dd>
+            </div>
+          </dl>
+        </article>
+        <article class="work-template" data-category="audiovisual">
+          <div class="template-index">07</div>
+          <div class="template-visual">
+            <img
+              src="https://i.ytimg.com/vi/fN0GxuqfFq0/maxresdefault.jpg"
+              alt="Copertina di Lost Trajectory"
+              width="1400"
+              height="1000"
+            />
+          </div>
+          <div class="template-main">
+            <p class="eyebrow">Audiovideo</p>
+            <h2>Lost Trajectory</h2>
+            <p>
+              Uno studio algoritmico su ritmo, sintesi FM particellare e campionatore,
+              realizzato con TouchDesigner.
+            </p>
+          </div>
+          <dl>
+            <div>
+              <dt>Anno</dt>
+              <dd>—</dd>
+            </div>
+            <div>
+              <dt>Video</dt>
+              <dd>
+                <button
+                  class="media-trigger"
+                  type="button"
+                  data-embed-url="https://www.youtube-nocookie.com/embed/fN0GxuqfFq0?rel=0"
+                  data-media-title="Lost Trajectory su YouTube"
+                >
+                  Guarda qui ↗
+                </button>
+              </dd>
+            </div>
+          </dl>
+        </article>
+        <article class="work-template" data-category="installation">
+          <div class="template-index">08</div>
+          <div class="template-visual installation-art"><span>◌</span></div>
+          <div class="template-main">
+            <p class="eyebrow">Installazione</p>
+            <h2>Titolo dell’installazione</h2>
+            <p>
+              Descrivere spazio, dispositivi, modalità di fruizione e contesto espositivo.
+            </p>
+          </div>
+          <dl>
+            <div>
+              <dt>Anno</dt>
+              <dd>Da inserire</dd>
+            </div>
+            <div>
+              <dt>Materiali</dt>
+              <dd>Da inserire</dd>
+            </div>
+            <div>
+              <dt>Luogo</dt>
+              <dd>Da inserire</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="work-template" data-category="github">
+          <div class="template-index">09</div>
+          <div class="template-visual code-art"><span>&lt;/&gt;</span></div>
+          <div class="template-main">
+            <p class="eyebrow">GitHub project</p>
+            <h2>Nome del progetto</h2>
+            <p>
+              Strumento, libreria o esperimento software legato alla pratica di ricerca.
+            </p>
+          </div>
+          <dl>
+            <div>
+              <dt>Linguaggio</dt>
+              <dd>Da inserire</dd>
+            </div>
+            <div>
+              <dt>Stato</dt>
+              <dd>In sviluppo</dd>
+            </div>
+            <div>
+              <dt>Repository</dt>
+              <dd>Link GitHub</dd>
+            </div>
+          </dl>
+        </article>
+      </section>
     </main>
-
-    <!-- PIÈ DI PAGINA -->
-    <footer>
-      <span>© 2026 MICHELE LORUSSO</span>
-      <span>COMPOSITION · VISUALS · RESEARCH</span>
-      <a href="#main">TORNA SU ↑</a>
-    </footer>
   </body>
 </html>
