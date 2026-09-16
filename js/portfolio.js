@@ -17,11 +17,20 @@ filters.forEach((button) => {
 
 // PLAYER ON DEMAND — l'iframe viene creato soltanto al clic sul pulsante.
 document.querySelectorAll('.media-trigger').forEach((button) => {
-  button.addEventListener('click', () => {
-    const work = button.closest('.work-template');
-    const preview = work?.querySelector('.template-visual');
+  const work = button.closest('.work-template');
+  const preview = work?.querySelector('.template-visual');
+  const metadataRow = button.closest('dl > div');
 
-    if (!preview || preview.querySelector('iframe')) return;
+  if (!preview || !metadataRow) return;
+
+  const actions = document.createElement('div');
+  actions.className = 'media-actions';
+  actions.append(button);
+  preview.append(actions);
+  metadataRow.remove();
+
+  button.addEventListener('click', () => {
+    if (preview.querySelector('iframe')) return;
 
     const player = document.createElement('iframe');
     player.src = button.dataset.embedUrl;
@@ -30,9 +39,14 @@ document.querySelectorAll('.media-trigger').forEach((button) => {
     player.allow = 'autoplay; encrypted-media; picture-in-picture';
     player.allowFullscreen = true;
 
-    preview.replaceChildren(player);
+    if (button.dataset.mediaProvider === 'soundcloud') {
+      preview.append(player);
+      preview.classList.add('has-soundcloud-player');
+      actions.hidden = true;
+    } else {
+      preview.replaceChildren(player);
+    }
+
     preview.classList.add('has-player');
-    button.textContent = 'Player aperto';
-    button.disabled = true;
   });
 });
