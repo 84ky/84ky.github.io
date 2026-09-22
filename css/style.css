@@ -474,9 +474,6 @@ figcaption {
   background-position: center;
   background-size: cover;
 }
-.soundcloud-preview.waveform > span {
-  display: none;
-}
 .soundcloud-preview.has-soundcloud-player iframe {
   position: static;
   height: 166px;
@@ -523,6 +520,30 @@ figcaption {
   color: var(--muted);
   font-size: 13px;
   margin-top: 17px;
+}
+.work-description[data-collapsible] {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.work-description[data-collapsible].is-expanded {
+  display: block;
+}
+.description-toggle {
+  margin-top: 10px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 0 0 3px;
+  background: transparent;
+  color: var(--lilac);
+  font:
+    11px 'JetBrains Mono',
+    monospace;
+  cursor: pointer;
+}
+.description-toggle:hover {
+  color: var(--text);
 }
 .work-template dl {
   margin: 0;

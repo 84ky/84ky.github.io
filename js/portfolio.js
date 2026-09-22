@@ -22,6 +22,18 @@ if (workList) {
     });
 }
 
+// DESCRIZIONI LUNGHE — il testo si espande solo quando viene richiesto.
+document.querySelectorAll('.description-toggle').forEach((button) => {
+  button.addEventListener('click', () => {
+    const description = button.previousElementSibling;
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+    description.classList.toggle('is-expanded', !isExpanded);
+    button.setAttribute('aria-expanded', String(!isExpanded));
+    button.textContent = isExpanded ? 'Leggi tutto' : 'Mostra meno';
+  });
+});
+
 filters.forEach((button) => {
   button.addEventListener('click', () => {
     filters.forEach((filter) =>
