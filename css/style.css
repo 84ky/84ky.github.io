@@ -470,12 +470,11 @@ figcaption {
   border: 0;
 }
 .soundcloud-preview {
-  min-height: 280px;
+  min-height: 0;
+  aspect-ratio: 1;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-}
-.soundcloud-preview.waveform > span {
-  display: none;
 }
 .soundcloud-preview.has-soundcloud-player iframe {
   position: static;
@@ -486,6 +485,8 @@ figcaption {
 .soundcloud-preview.has-soundcloud-player {
   display: flex;
   flex-direction: column;
+  min-height: 280px;
+  aspect-ratio: auto;
   justify-content: flex-end;
 }
 .media-actions {
@@ -523,6 +524,30 @@ figcaption {
   color: var(--muted);
   font-size: 13px;
   margin-top: 17px;
+}
+.work-description[data-collapsible] {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.work-description[data-collapsible].is-expanded {
+  display: block;
+}
+.description-toggle {
+  margin-top: 10px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 0 0 3px;
+  background: transparent;
+  color: var(--lilac);
+  font:
+    11px 'JetBrains Mono',
+    monospace;
+  cursor: pointer;
+}
+.description-toggle:hover {
+  color: var(--text);
 }
 .work-template dl {
   margin: 0;
