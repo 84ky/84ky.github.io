@@ -290,28 +290,19 @@ figcaption {
   padding: clamp(66px, 10vw, 145px) clamp(26px, 7vw, 115px) 110px;
   align-items: start;
 }
-.portrait-frame {
-  display: grid;
-  place-items: center;
+.portrait {
   aspect-ratio: 4 / 5;
   min-height: 390px;
-  background:
-    radial-gradient(circle at 50% 42%, var(--portrait-dot) 0 1px, transparent 2px) 0 0 /
-      18px 18px,
-    linear-gradient(145deg, var(--panel), var(--portrait-dark));
+  overflow: hidden;
   border: 1px solid var(--line);
-  color: var(--lilac);
+  background: var(--panel);
 }
-.portrait-frame span {
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.7;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.portrait-placeholder figcaption {
-  color: var(--muted);
-  margin-top: 14px;
+.portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 64% center;
 }
 .about-copy {
   max-width: 580px;
@@ -777,7 +768,7 @@ figcaption {
     padding: 52px 23px 65px;
     gap: 34px;
   }
-  .portrait-frame {
+  .portrait {
     min-height: 0;
     aspect-ratio: 3 / 2;
   }
