@@ -602,7 +602,7 @@ figcaption {
 }
 .event-card {
   display: grid;
-  grid-template-columns: 130px 1.1fr 0.9fr;
+  grid-template-columns: 95px 150px minmax(280px, 1.1fr) minmax(180px, 0.9fr);
   gap: 35px;
   padding: 35px 0;
   border-top: 1px solid var(--line);
@@ -641,6 +641,22 @@ figcaption {
   font-size: 13px;
   margin-top: 15px;
 }
+.event-poster {
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+.event-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.event-poster:hover,
+.event-poster:focus-visible {
+  border-color: var(--lilac);
+}
 .event-card dl {
   margin: 0;
   font-size: 11px;
@@ -655,6 +671,9 @@ figcaption {
 .event-card dd {
   color: var(--lilac);
   margin: 2px 0 0;
+}
+.event-card dd a {
+  color: inherit;
 }
 .template-hint {
   padding: 20px clamp(26px, 7vw, 115px) 95px;
