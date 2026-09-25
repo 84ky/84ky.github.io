@@ -498,6 +498,12 @@ figcaption {
   color: var(--lilac);
   font-size: 120px;
 }
+.installation-photo {
+  background: var(--panel);
+}
+.installation-photo img {
+  object-fit: contain;
+}
 .code-art {
   color: var(--lilac);
   font:
