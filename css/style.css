@@ -241,6 +241,12 @@ figcaption {
   fill: currentColor;
   stroke: none;
 }
+.orcid-mark {
+  font:
+    600 12px/1 'JetBrains Mono',
+    monospace;
+  letter-spacing: -0.1em;
+}
 
 /* 03. STRUTTURA PAGINA */
 .page {
@@ -613,6 +619,9 @@ figcaption {
   padding: 35px 0;
   border-top: 1px solid var(--line);
 }
+.event-card--no-poster {
+  grid-template-columns: 130px 1.1fr 0.9fr;
+}
 .event-card time {
   display: grid;
   grid-template-columns: 34px 1fr;
@@ -646,6 +655,11 @@ figcaption {
   color: var(--muted);
   font-size: 13px;
   margin-top: 15px;
+}
+.event-card .event-citation {
+  margin-top: 14px;
+  font-size: 11px;
+  line-height: 1.55;
 }
 .event-poster {
   display: block;
