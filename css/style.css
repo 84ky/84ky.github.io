@@ -528,6 +528,10 @@ figcaption {
   font-size: 13px;
   margin-top: 17px;
 }
+.template-main .repo-citation {
+  font-size: 11px;
+  line-height: 1.55;
+}
 .work-description[data-collapsible] {
   display: -webkit-box;
   overflow: hidden;
