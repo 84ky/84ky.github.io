@@ -458,6 +458,11 @@ figcaption {
   height: 100%;
   object-fit: cover;
 }
+.shorts-visual {
+  width: min(100%, 200px);
+  min-height: 0;
+  aspect-ratio: 9 / 16;
+}
 .template-visual.has-player {
   background: #000;
 }
